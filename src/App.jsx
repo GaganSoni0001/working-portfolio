@@ -1,227 +1,11 @@
-// import React from 'react';
-// import './App.css';
-// import Slider from '@mui/material/Slider';
-// import self3 from './assets/self3.jpg';
-
-// function App() {
-//   return (
-//     <div className="app">
-//       {/* --- Header --- */}
-//      <div className="header-container">
-//   <div className="logo"><span className="dot">Piyush Kaithwas</span></div>
-  
-//   {/* Hamburger icon for mobile */}
-//   <div className="hamburger" onClick={toggleMenu}>
-//     <div className="bar"></div>
-//     <div className="bar"></div>
-//     <div className="bar"></div>
-//   </div>
-
-//   {/* Navigation links */}
-//   <nav className="nav" id="navMenu">
-//     <a href="#Home" className="active">Home</a>
-//     <a href="#about">About Me</a>
-//     <a href="#skills">Skills</a>
-//     <a href="#projects">Projects</a>
-//     <a href="#Contact">Contact</a>
-//   </nav>
-// </div>
-
-//       {/* --- Hero Section --- */}
-//       <main className="main">
-//         <img src={self3} alt="my-image" className="profile-pic" />
-//         <h1>
-//           I'm <span className="highlight-purple">Piyush</span>{' '}
-//           <span className="highlight-gradient">Kaithwas</span>, Java <br />
-//           developer<span className="highlight-white"></span>.
-//         </h1>
-//         <p>
-//           Passionate Java developer specializing in creating <br />robust and
-//           efficient backend systems.
-//         </p>
-//         <div className="buttons">
-//           <button
-//             className="bg-amber-800"
-//             onClick={() => {
-//               const section = document.getElementById("Contact");
-//               if (section) section.scrollIntoView({ behavior: "smooth" });
-//             }}
-//           >
-//             Connect With Me
-//           </button>
-//           <a
-//             href="/myresume.pdf"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="resume"
-//           >
-//             My Resume
-//           </a>
-//         </div>
-//       </main>
-
-//       {/* --- About Me Section --- */}
-//       <section id="about" className="about-section">
-//         <h2 className="about-title">About <span className="highlight-me">me</span></h2>
-//         <div className="about-content">
-//           <img src={self3} alt="piyush-kaithwas" className="about-pic" />
-//           <div className="about-text">
-//             <p>
-//               A brief intro, who am I?
-//               A dedicated Java developer 💻 with a passion for crafting efficient and robust backend systems.
-//               Currently, I am expanding my skill set by delving into Data Structures and Algorithms (DSA). I believe that a solid understanding of DSA 📚 is crucial for optimizing performance & solving complex problems efficiently.🔍
-//               In addition to my Java expertise, I am passionate about learning Android development to build innovative mobile applications. 🚀
-//             </p>
-
-//             {/* ✅ Merged Slider Section Starts Here */}
-//             <div className="skills">
-//               <div className="skill">
-//                 <span>Java & Mysql</span>
-//                 <Slider defaultValue={90} valueLabelDisplay="auto" />
-//               </div>
-//               <div className="skill">
-//                 <span>React JS</span>
-//                 <Slider defaultValue={75} valueLabelDisplay="auto" />
-//               </div>
-//               <div className="skill">
-//                 <span>Jdbc & Jsp</span>
-//                 <Slider defaultValue={85} valueLabelDisplay="auto" />
-//               </div>
-//               <div className="skill">
-//                 <span>Dsa</span>
-//                 <Slider defaultValue={70} valueLabelDisplay="auto" />
-//               </div>
-//             </div>
-//             {/* ✅ Slider Section Ends */}
-//           </div>
-//         </div>
-
-//         <div className="divider-line"></div>
-//       </section>
-
-//       {/* --- My Skills Section --- */}
-//       <section id="skills" className="skills-section"> ✅ My Skills
-//         <h2 className="skills-title">
-//           <span className="highlight-dot green" /> My Skills <span className="highlight-dot green" />
-//         </h2>
-//         <div className="skills-container">
-//           <div className="skills-left">
-//             <h3>My Programming<br />language.</h3>
-//             <p>
-//               I focus on all things design and web related. <br />
-//               With each of my services, my goal is to deliver an impactful and <br />
-//               elevating digital experience for everyone.
-//             </p>
-//           </div>
-//           <div className="skills-right">
-//             <ul>
-//               <li>C language</li>
-//               <li>C++ language</li>
-//               <li>Java Core language</li>
-//               <li>Java Advance</li>
-//               <li>Kotlin (familiar)</li>
-//               <li>MySQL</li>
-//             </ul>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* --- Toolboxes Section --- */}
-//       <section className="toolbox-section">
-//         <div className="toolbox-card">
-//           <div className="toolbox-left">
-//             <h2>
-//               My Development<br />
-//               toolboxes.
-//             </h2>
-//             <p>
-//               I focus on all things design and web related.<br />
-//               With each of my services, my goal is to
-//               deliver an impactful <br />
-//               and elevating digital experience for everyone.
-//             </p>
-//           </div>
-//           <div className="toolbox-right">
-//             <ul>
-//               <li>Visual - studio</li>
-//               <li>GitHub</li>
-//               <li>Git</li>
-//               <li>testing - units</li>
-//               <li>Linux</li>
-//               <li>Eclipse - Tools</li>
-//               <li>Leetcode</li>
-//             </ul>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* --- Projects Section --- */}
-//       <section id="projects" className="projects-section"> ✅ Projects
-//         <h2 className="projects-title">
-//           featured <span className="highlight-project">projects</span>
-//         </h2>
-//         <div className="projects-container">
-//           <div className="project-card">
-//             <img src="/port.jpg" alt="Project 1" className="project-image" />
-//             <h3>Portfolio Website</h3>
-//             <p>A modern responsive portfolio built with React, showcasing animations, skills, and contact info.</p>
-//             <a href="#" className="project-link">View Project →</a>
-//           </div>
-//           <div className="project-card">
-//             <img src="/ecomm.jpg" alt="Project 2" className="project-image" />
-//             <h3>E-commerce Store</h3>
-//             <p>A React + Redux based online store with product filters, shopping cart, and secure checkout.</p>
-//             <a href="#" className="project-link">View Project →</a>
-//           </div>
-//           <div className="project-card">
-//             <img src="/pay.jpg" alt="Project 3" className="project-image" />
-//             <h3>Payroll System</h3>
-//             <p>Typically includes a combination of front-end, back-end, database, and cloud technologies.</p>
-//             <a href="#" className="project-link">View Project →</a>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* --- Contact Section --- */}
-//       <section id="Contact" className="contact-section"> ✅ Contact
-//         <div className="contact-left">
-//           <h2 className="contact-heading">Let's talk</h2>
-//           <p>
-//             I'm currently available to take on new projects, so feel free to send
-//             me a message about anything that you want me to work on. You can
-//             contact anytime.
-//           </p>
-//           <div className="contact-info">
-//             <div><span>📧</span> piyushkaithwas036@gmail.com</div>
-//             <div><span>📞</span> +91 97701 08221</div>
-//             <div><span>📍</span> indore , India</div>
-//           </div>
-//         </div>
-
-//         <div className="contact-right">
-//           <form>
-//             <label htmlFor="name">Your Name</label>
-//             <input type="text" id="name" placeholder="Enter your name" />
-//             <label htmlFor="email">Your Email</label>
-//             <input type="email" id="email" placeholder="Enter your email" />
-//             <label htmlFor="message">Write your message here</label>
-//             <textarea id="message" rows="6" placeholder="Enter your message"></textarea>
-//             <button type="submit" className="send-button">Send Message</button>
-//             <button type="submit" className="submit-button">Submit now</button>
-//           </form>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import './App.css';
 import Slider from '@mui/material/Slider';
-import self3 from './assets/self3.jpg';
-
+import my from './assets/self2.jpeg';
+import myPhoto from './assets/self2.jpeg'; // <-- Your photo
+import blood from '../public/blood.jpg';
+import oms from '../public/oms.jpg';
+import doctor from '../public/doctor.jpg';
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -233,9 +17,8 @@ function App() {
     <div className="app">
       {/* --- Header --- */}
       <div className="header-container">
-        <div className="logo"><span className="dot">Piyush Kaithwas</span></div>
+        <div className="logo"><span className="dot">Gagan Soni</span></div>
         
-        {/* Hamburger icon for mobile */}
         <div 
           className={`hamburger ${menuOpen ? 'active' : ''}`} 
           onClick={toggleMenu}
@@ -245,7 +28,6 @@ function App() {
           <div className="bar"></div>
         </div>
 
-        {/* Navigation links */}
         <nav className={`nav ${menuOpen ? 'active' : ''}`}>
           <a href="#Home" className="active" onClick={() => setMenuOpen(false)}>Home</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About Me</a>
@@ -257,15 +39,15 @@ function App() {
 
       {/* --- Hero Section --- */}
       <main className="main">
-        <img src={self3} alt="my-image" className="profile-pic" />
+        <img src={my} alt="Gagan Soni" className="profile-pic" />
         <h1>
-          I'm <span className="highlight-purple">Piyush</span>{' '}
-          <span className="highlight-gradient">Kaithwas</span>, Java <br />
-          developer<span className="highlight-white"></span>.
+          I'm <span className="highlight-purple">Gagan</span>{' '}
+          <span className="highlight-gradient">Soni</span>, Java <br />
+          Developer<span className="highlight-white"></span>.
         </h1>
         <p>
-          Passionate Java developer specializing in creating <br />robust and
-          efficient backend systems.
+          Fresher Java developer with a passion for creating<br />
+          efficient backend systems and dynamic web applications.
         </p>
         <div className="buttons">
           <button
@@ -278,7 +60,7 @@ function App() {
             Connect With Me
           </button>
           <a
-            href="/myresume.pdf"
+            href="\public\GAGAN SONI.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="resume"
@@ -292,30 +74,31 @@ function App() {
       <section id="about" className="about-section">
         <h2 className="about-title">About <span className="highlight-me">me</span></h2>
         <div className="about-content">
-          <img src={self3} alt="piyush-kaithwas" className="about-pic" />
+          <img src={myPhoto} alt="gagan-soni" className="about-pic" />
           <div className="about-text">
             <p>
-              A brief intro, who am I?
-              A dedicated Java developer 💻 with a passion for crafting efficient and robust backend systems.
-              Currently, I am expanding my skill set by delving into Data Structures and Algorithms (DSA). I believe that a solid understanding of DSA 📚 is crucial for optimizing performance & solving complex problems efficiently.🔍
-              In addition to my Java expertise, I am passionate about learning Android development to build innovative mobile applications. 🚀
+              Hello! I am a dedicated Java developer 💻 with strong knowledge in
+              Core Java, JDBC, JSP, MySQL, and ReactJS.  
+              I have built projects like Blood Bank Management, E-Book Store, and Apna Doctor.  
+              I’m also learning Data Structures & Algorithms 📚 to improve problem-solving skills
+              and have a keen interest in full-stack and mobile app development 🚀.
             </p>
 
             <div className="skills">
               <div className="skill">
-                <span>Java & Mysql</span>
+                <span>Java & MySQL</span>
                 <Slider defaultValue={90} valueLabelDisplay="auto" />
               </div>
               <div className="skill">
                 <span>React JS</span>
-                <Slider defaultValue={75} valueLabelDisplay="auto" />
+                <Slider defaultValue={80} valueLabelDisplay="auto" />
               </div>
               <div className="skill">
-                <span>Jdbc & Jsp</span>
+                <span>JDBC & JSP</span>
                 <Slider defaultValue={85} valueLabelDisplay="auto" />
               </div>
               <div className="skill">
-                <span>Dsa</span>
+                <span>DSA</span>
                 <Slider defaultValue={70} valueLabelDisplay="auto" />
               </div>
             </div>
@@ -325,102 +108,81 @@ function App() {
         <div className="divider-line"></div>
       </section>
 
-      {/* --- My Skills Section --- */}
+      {/* --- Skills Section --- */}
       <section id="skills" className="skills-section">
         <h2 className="skills-title">
           <span className="highlight-dot green" /> My Skills <span className="highlight-dot green" />
         </h2>
         <div className="skills-container">
           <div className="skills-left">
-            <h3>My Programming<br />language.</h3>
+            <h3>Programming<br />Languages</h3>
             <p>
-              I focus on all things design and web related. <br />
-              With each of my services, my goal is to deliver an impactful and <br />
-              elevating digital experience for everyone.
+              Strong foundation in backend and web development,<br />
+              focusing on scalable and maintainable solutions.
             </p>
           </div>
           <div className="skills-right">
             <ul>
-              <li>C language</li>
-              <li>C++ language</li>
-              <li>Java Core language</li>
-              <li>Java Advance</li>
-              <li>Kotlin (familiar)</li>
+              <li>Java Core & Advanced</li>
+              {/* <li>C & C++</li>
+              <li>Kotlin (Basic)</li> */}
               <li>MySQL</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* --- Toolboxes Section --- */}
-      <section className="toolbox-section">
-        <div className="toolbox-card">
-          <div className="toolbox-left">
-            <h2>
-              My Development<br />
-              toolboxes.
-            </h2>
-            <p>
-              I focus on all things design and web related.<br />
-              With each of my services, my goal is to
-              deliver an impactful <br />
-              and elevating digital experience for everyone.
-            </p>
-          </div>
-          <div className="toolbox-right">
-            <ul>
-              <li>Visual - studio</li>
-              <li>GitHub</li>
-              <li>Git</li>
-              <li>testing - units</li>
-              <li>Linux</li>
-              <li>Eclipse - Tools</li>
-              <li>Leetcode</li>
+              <li>JavaScript & React</li>
             </ul>
           </div>
         </div>
       </section>
 
       {/* --- Projects Section --- */}
-      <section id="projects" className="projects-section">
-        <h2 className="projects-title">
-          featured <span className="highlight-project">projects</span>
-        </h2>
-        <div className="projects-container">
-          <div className="project-card">
-            <img src="/port.jpg" alt="Project 1" className="project-image" />
-            <h3>Portfolio Website</h3>
-            <p>A modern responsive portfolio built with React, showcasing animations, skills, and contact info.</p>
-            <a href="#" className="project-link">View Project →</a>
-          </div>
-          <div className="project-card">
-            <img src="/ecomm.jpg" alt="Project 2" className="project-image" />
-            <h3>E-commerce Store</h3>
-            <p>A React + Redux based online store with product filters, shopping cart, and secure checkout.</p>
-            <a href="#" className="project-link">View Project →</a>
-          </div>
-          <div className="project-card">
-            <img src="/pay.jpg" alt="Project 3" className="project-image" />
-            <h3>Payroll System</h3>
-            <p>Typically includes a combination of front-end, back-end, database, and cloud technologies.</p>
-            <a href="#" className="project-link">View Project →</a>
-          </div>
-        </div>
-      </section>
+<section id="projects" className="projects-section">
+  <h2 className="projects-title">
+    featured <span className="highlight-project">projects</span>
+  </h2>
+  <div className="projects-container">
+    <div className="project-card">
+      <img src={blood} alt="Blood Bank" className="project-image" />
+      <h3>Blood Bank Management</h3>
+      <p>
+        Java + MySQL based system for managing blood donations, donors, and requests.
+        Frontend developed using <strong>React</strong> for a modern and responsive UI.
+      </p>
+      <a href="#" className="project-link">View Project →</a>
+    </div>
+
+    <div className="project-card">
+      <img src={oms} alt="Offline Management System" className="project-image" />
+      <h3>Offline Management System (OMS)</h3>
+      <p>
+        Java + MySQL desktop-based system for managing courses, student enquiries,
+        and records offline. Frontend interface created with <strong>React</strong>.
+      </p>
+      <a href="#" className="project-link">View Project →</a>
+    </div>
+
+    <div className="project-card">
+      <img src={doctor} alt="Apna Doctor" className="project-image" />
+      <h3>Apna Doctor</h3>
+      <p>
+        Java + MySQL healthcare management system for booking appointments,
+        managing doctors, and storing patient records. UI built using <strong>React</strong>.
+      </p>
+      <a href="#" className="project-link">View Project →</a>
+    </div>
+  </div>
+</section>
 
       {/* --- Contact Section --- */}
       <section id="Contact" className="contact-section">
         <div className="contact-left">
           <h2 className="contact-heading">Let's talk</h2>
           <p>
-            I'm currently available to take on new projects, so feel free to send
-            me a message about anything that you want me to work on. You can
-            contact anytime.
+            I’m available for internships, freelance work, and full-time opportunities.
+            Drop me a message anytime.
           </p>
           <div className="contact-info">
-            <div><span>📧</span> piyushkaithwas036@gmail.com</div>
-            <div><span>📞</span> +91 97701 08221</div>
-            <div><span>📍</span> indore , India</div>
+            <div><span>📧</span> gagansoni80551@gmail.com</div>
+            <div><span>📞</span> +91 8815808602</div>
+            <div><span>📍</span> Khandwa, Madhya Pradesh, India</div>
           </div>
         </div>
 
